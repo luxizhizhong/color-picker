@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Footer from './components/footer'
+import Bg from './components/bg'
+import { PhotoshopPicker } from 'react-color';
+import PickerStyle from './utils/picker'
+export default class extends React.Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  constructor(props) {
+    super(props)
+    this.state = {
+      backgroundColor: '#666',
+      PickerStyle
+    }
+  }
+
+  handleChangeComplete = (color) => {
+    this.setState({ backgroundColor: color.hex });
+  };
+
+  moveToPicker = e=> {
+    // TODO: bar 移动
+  }
+
+  render() {
+    return (
+      <div>
+        <Bg color={ this.state.backgroundColor } />
+        <div style={ PickerStyle }>
+          <div onClick={ this.moveToPicker } className="bar"></div>
+          <PhotoshopPicker
+            color={ this.state.backgroundColor }
+            onChangeComplete={ this.handleChangeComplete }
+          />
+        </div>
+        <Footer />
+      </div>
+    )
+  }
+
 }
-
-export default App;
