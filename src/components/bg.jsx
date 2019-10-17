@@ -10,7 +10,6 @@ const btnStyl = {
 export default class extends Component {
 
   constructor(props) {
-    console.log(`props: `, props)
     super(props)
     this.state = {
       withHeight: '420px'
