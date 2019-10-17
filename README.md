@@ -29,8 +29,8 @@ yarn build
 
 ### license
 
-Copyright (c) [2019] [d1y<chenhonzhou@gmail.com>]
-[Software Name] is licensed under the Mulan PSL v1.
+Copyright (c) [2019] [chenhonzhou@gmail.com]
+[d1y] is licensed under the Mulan PSL v1.
 You can use this software according to the terms and conditions of the Mulan PSL v1.
 You may obtain a copy of Mulan PSL v1 at:
     http://license.coscl.org.cn/MulanPSL
